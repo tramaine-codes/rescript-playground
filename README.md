@@ -16,7 +16,7 @@ npm install
 
 ## Exercises
 
-The OCmal [exerices](https://ocaml.org/problems) are solved in ReScript and are used as a means to explore ReScript syntax, semantics, and idioms.
+The OCmal [exercises](https://ocaml.org/problems) are solved in ReScript and are used as a means to explore ReScript syntax, semantics, and idioms.
 
 ## Build
 
