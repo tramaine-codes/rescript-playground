@@ -1,12 +1,22 @@
 # ReScript Playground
 
-A playground for experimenting with ReScript
+This project serves as a playground for exploring this [ReScript Programming Language](https://rescript-lang.org/).
+
+## Prerequisites
+
+Ensure the following requirements are met prior to usage:
+
+- Node.js 14 or higher
 
 ## Installation
 
 ```sh
 npm install
 ```
+
+## Exercises
+
+The OCmal [exerices](https://ocaml.org/problems) are solved in ReScript and are used as a means to explore ReScript syntax, semantics, and idioms.
 
 ## Build
 
