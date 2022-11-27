@@ -1,6 +1,6 @@
 # ReScript Playground
 
-This project serves as a playground for exploring this [ReScript Programming Language](https://rescript-lang.org/).
+This project serves as a playground for exploring this [ReScript](https://rescript-lang.org/) programming language.
 
 ## Prerequisites
 
