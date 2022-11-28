@@ -15,7 +15,10 @@ let rec lastTwo = (list) => {
 }
 
 Js.log(last(list{}));
+Js.log(last(list{1}));
+Js.log(last(list{1, 2}));
 Js.log(last(list{1, 2, 3}));
 Js.log(lastTwo(list{}));
 Js.log(lastTwo(list{1}));
+Js.log(lastTwo(list{1, 2}));
 Js.log(lastTwo(list{1, 2, 3}));

@@ -2,24 +2,24 @@
 'use strict';
 
 
-function add1(aList) {
-  if (aList) {
-    return aList.hd + add1(aList.tl) | 0;
+function add1(list) {
+  if (list) {
+    return list.hd + add1(list.tl) | 0;
   } else {
     return 0;
   }
 }
 
-function add2(_totalOpt, _aList) {
+function add2(_totalOpt, _list) {
   while(true) {
     var totalOpt = _totalOpt;
-    var aList = _aList;
+    var list = _list;
     var total = totalOpt !== undefined ? totalOpt : 0;
-    if (!aList) {
+    if (!list) {
       return total;
     }
-    _aList = aList.tl;
-    _totalOpt = aList.hd + total | 0;
+    _list = list.tl;
+    _totalOpt = list.hd + total | 0;
     continue ;
   };
 }

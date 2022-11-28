@@ -43,6 +43,19 @@ console.log(last(/* [] */0));
 
 console.log(last({
           hd: 1,
+          tl: /* [] */0
+        }));
+
+console.log(last({
+          hd: 1,
+          tl: {
+            hd: 2,
+            tl: /* [] */0
+          }
+        }));
+
+console.log(last({
+          hd: 1,
           tl: {
             hd: 2,
             tl: {
@@ -57,6 +70,14 @@ console.log(lastTwo(/* [] */0));
 console.log(lastTwo({
           hd: 1,
           tl: /* [] */0
+        }));
+
+console.log(lastTwo({
+          hd: 1,
+          tl: {
+            hd: 2,
+            tl: /* [] */0
+          }
         }));
 
 console.log(lastTwo({
