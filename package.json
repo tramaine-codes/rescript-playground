@@ -5,7 +5,8 @@
     "res:build": "rescript",
     "res:clean": "rescript clean",
     "res:start": "rescript build -w",
-    "res:format": "rescript format -all"
+    "res:format": "rescript format -all",
+    "start": "nodemon src/Main.bs.js"
   },
   "keywords": [
     "rescript"
@@ -14,5 +15,8 @@
   "license": "MIT",
   "dependencies": {
     "rescript": "*"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.20"
   }
 }
