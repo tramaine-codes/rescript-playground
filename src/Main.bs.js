@@ -194,29 +194,28 @@ console.log(at({
           }
         }, 3) === undefined);
 
-function length(list) {
-  var _list = list;
-  var _acc = 0;
+function length(_countOpt, _list) {
   while(true) {
-    var acc = _acc;
-    var list$1 = _list;
-    if (!list$1) {
-      return acc;
+    var countOpt = _countOpt;
+    var list = _list;
+    var count = countOpt !== undefined ? countOpt : 0;
+    if (!list) {
+      return count;
     }
-    _acc = acc + 1 | 0;
-    _list = list$1.tl;
+    _list = list.tl;
+    _countOpt = count + 1 | 0;
     continue ;
   };
 }
 
-console.log(length(/* [] */0) === 0);
+console.log(length(undefined, /* [] */0) === 0);
 
-console.log(length({
+console.log(length(undefined, {
           hd: 1,
           tl: /* [] */0
         }) === 1);
 
-console.log(length({
+console.log(length(undefined, {
           hd: 1,
           tl: {
             hd: 2,
@@ -224,7 +223,7 @@ console.log(length({
           }
         }) === 2);
 
-console.log(length({
+console.log(length(undefined, {
           hd: 1,
           tl: {
             hd: 2,

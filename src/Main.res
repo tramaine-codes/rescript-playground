@@ -43,15 +43,11 @@ Js.log(at(list{1, 2, 3}, 1) === Some(2))
 Js.log(at(list{1, 2, 3}, 2) === Some(3))
 Js.log(at(list{1, 2, 3}, 3) === None)
 
-let length = list => {
-  let rec count = (list, acc) => {
-    switch list {
-    | list{} => acc
-    | list{_, ...rest} => count(rest, acc + 1)
-    }
+let rec length = (~count=0, list) => {
+  switch list {
+  | list{} => count
+  | list{_, ...rest} => length(rest, ~count=count + 1)
   }
-
-  count(list, 0)
 }
 
 Js.log(length(list{}) === 0)
