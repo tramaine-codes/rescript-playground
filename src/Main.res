@@ -54,3 +54,15 @@ Js.log(length(list{}) === 0)
 Js.log(length(list{1}) === 1)
 Js.log(length(list{1, 2}) === 2)
 Js.log(length(list{1, 2, 3}) === 3)
+
+let rec reverse = list => {
+  switch list {
+  | list{} | list{_} => list
+  | list{first, ...rest} => Belt.List.concat(reverse(rest), list{first})
+  }
+}
+
+Js.log(reverse(list{}) === list{})
+Js.log(reverse(list{1}) == list{1})
+Js.log(reverse(list{1, 2}) == list{2, 1})
+Js.log(reverse(list{1, 2, 3}) == list{3, 2, 1})

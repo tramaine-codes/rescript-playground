@@ -2,6 +2,7 @@
 'use strict';
 
 var Caml_obj = require("rescript/lib/js/caml_obj.js");
+var Belt_List = require("rescript/lib/js/belt_List.js");
 var Caml_option = require("rescript/lib/js/caml_option.js");
 
 function last(_list) {
@@ -234,8 +235,68 @@ console.log(length(undefined, {
           }
         }) === 3);
 
+function reverse(list) {
+  if (!list) {
+    return list;
+  }
+  var rest = list.tl;
+  if (rest) {
+    return Belt_List.concat(reverse(rest), {
+                hd: list.hd,
+                tl: /* [] */0
+              });
+  } else {
+    return list;
+  }
+}
+
+console.log(reverse(/* [] */0) === /* [] */0);
+
+console.log(Caml_obj.equal(reverse({
+              hd: 1,
+              tl: /* [] */0
+            }), {
+          hd: 1,
+          tl: /* [] */0
+        }));
+
+console.log(Caml_obj.equal(reverse({
+              hd: 1,
+              tl: {
+                hd: 2,
+                tl: /* [] */0
+              }
+            }), {
+          hd: 2,
+          tl: {
+            hd: 1,
+            tl: /* [] */0
+          }
+        }));
+
+console.log(Caml_obj.equal(reverse({
+              hd: 1,
+              tl: {
+                hd: 2,
+                tl: {
+                  hd: 3,
+                  tl: /* [] */0
+                }
+              }
+            }), {
+          hd: 3,
+          tl: {
+            hd: 2,
+            tl: {
+              hd: 1,
+              tl: /* [] */0
+            }
+          }
+        }));
+
 exports.last = last;
 exports.lastTwo = lastTwo;
 exports.at = at;
 exports.length = length;
+exports.reverse = reverse;
 /*  Not a pure module */
