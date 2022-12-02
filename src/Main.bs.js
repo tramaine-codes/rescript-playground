@@ -2,7 +2,6 @@
 'use strict';
 
 var Caml_obj = require("rescript/lib/js/caml_obj.js");
-var Belt_List = require("rescript/lib/js/belt_List.js");
 var Caml_option = require("rescript/lib/js/caml_option.js");
 
 function last(_list) {
@@ -236,18 +235,21 @@ console.log(length(undefined, {
         }) === 3);
 
 function reverse(list) {
-  if (!list) {
-    return list;
-  }
-  var rest = list.tl;
-  if (rest) {
-    return Belt_List.concat(reverse(rest), {
-                hd: list.hd,
-                tl: /* [] */0
-              });
-  } else {
-    return list;
-  }
+  var _acc = /* [] */0;
+  var _list = list;
+  while(true) {
+    var list$1 = _list;
+    var acc = _acc;
+    if (!list$1) {
+      return acc;
+    }
+    _list = list$1.tl;
+    _acc = {
+      hd: list$1.hd,
+      tl: acc
+    };
+    continue ;
+  };
 }
 
 console.log(reverse(/* [] */0) === /* [] */0);
