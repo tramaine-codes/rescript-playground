@@ -234,27 +234,26 @@ console.log(length(undefined, {
           }
         }) === 3);
 
-function reverse(list) {
-  var _acc = /* [] */0;
-  var _list = list;
+function reverse(_accOpt, _list) {
   while(true) {
-    var list$1 = _list;
-    var acc = _acc;
-    if (!list$1) {
+    var accOpt = _accOpt;
+    var list = _list;
+    var acc = accOpt !== undefined ? accOpt : /* [] */0;
+    if (!list) {
       return acc;
     }
-    _list = list$1.tl;
-    _acc = {
-      hd: list$1.hd,
+    _list = list.tl;
+    _accOpt = {
+      hd: list.hd,
       tl: acc
     };
     continue ;
   };
 }
 
-console.log(reverse(/* [] */0) === /* [] */0);
+console.log(reverse(undefined, /* [] */0) === /* [] */0);
 
-console.log(Caml_obj.equal(reverse({
+console.log(Caml_obj.equal(reverse(undefined, {
               hd: 1,
               tl: /* [] */0
             }), {
@@ -262,7 +261,7 @@ console.log(Caml_obj.equal(reverse({
           tl: /* [] */0
         }));
 
-console.log(Caml_obj.equal(reverse({
+console.log(Caml_obj.equal(reverse(undefined, {
               hd: 1,
               tl: {
                 hd: 2,
@@ -276,7 +275,7 @@ console.log(Caml_obj.equal(reverse({
           }
         }));
 
-console.log(Caml_obj.equal(reverse({
+console.log(Caml_obj.equal(reverse(undefined, {
               hd: 1,
               tl: {
                 hd: 2,

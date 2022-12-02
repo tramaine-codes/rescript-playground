@@ -55,15 +55,11 @@ Js.log(length(list{1}) === 1)
 Js.log(length(list{1, 2}) === 2)
 Js.log(length(list{1, 2, 3}) === 3)
 
-let reverse = list => {
-  let rec helper = (acc, list) => {
-    switch list {
-    | list{} => acc
-    | list{first, ...rest} => helper(list{first, ...acc}, rest)
-    }
+let rec reverse = (~acc=list{}, list) => {
+  switch list {
+  | list{} => acc
+  | list{first, ...rest} => reverse(rest, ~acc=list{first, ...acc})
   }
-
-  helper(list{}, list)
 }
 
 Js.log(reverse(list{}) === list{})
