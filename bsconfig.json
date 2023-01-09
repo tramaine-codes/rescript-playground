@@ -1,13 +1,16 @@
 {
   "name": "rescript-playground",
-  "sources": {
-    "dir": "src",
-    "subdirs": true
-  },
+  "suffix": ".mjs",
+  "sources": [
+    { "dir": "src", "subdirs": true },
+    { "dir": "test", "subdirs": true, "type": "dev" }
+  ],
   "package-specs": {
     "module": "es6",
     "in-source": true
   },
-  "suffix": ".bs.js",
-  "bs-dependencies": []
+  "bs-dependencies": [],
+  "bs-dev-dependencies": [
+    "rescript-test"
+  ]
 }

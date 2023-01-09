@@ -3,21 +3,21 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "res:build": "rescript",
-    "res:clean": "rescript clean",
-    "res:start": "rescript build -w",
-    "res:format": "rescript format -all",
-    "start": "nodemon src/Main.bs.js"
+    "build": "rescript",
+    "test": "retest test/**/*.mjs",
+    "clean": "rescript clean",
+    "watch": "rescript build -w",
+    "format": "rescript format -all",
+    "start": "nodemon src/Main.mjs"
   },
   "keywords": [
     "rescript"
   ],
   "author": "",
   "license": "MIT",
-  "dependencies": {
-    "rescript": "*"
-  },
   "devDependencies": {
-    "nodemon": "2.0.20"
+    "nodemon": "2.0.20",
+    "rescript": "10.0.1",
+    "rescript-test": "4.0.0"
   }
 }
