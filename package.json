@@ -16,7 +16,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "2.0.21",
+    "nodemon": "2.0.22",
     "rescript": "10.1.3",
     "rescript-test": "4.0.0"
   }
