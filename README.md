@@ -6,7 +6,7 @@ This project serves as a playground for exploring this [ReScript](https://rescri
 
 Ensure the following requirements are met prior to usage:
 
-- Node.js 14 or higher
+- Node.js 16 or higher
 
 ## Installation
 
