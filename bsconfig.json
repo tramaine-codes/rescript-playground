@@ -10,7 +10,5 @@
     "in-source": true
   },
   "bs-dependencies": [],
-  "bs-dev-dependencies": [
-    "rescript-test"
-  ]
+  "bs-dev-dependencies": ["rescript-vitest"]
 }
