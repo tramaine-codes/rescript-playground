@@ -7,8 +7,6 @@
     "clean": "rescript clean",
     "format": "rescript format -all",
     "start": "nodemon src/Main.mjs",
-    "test": "vitest run",
-    "test:watch": "vitest",
     "watch": "rescript build -w"
   },
   "keywords": [
@@ -17,11 +15,8 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@jihchi/vite-plugin-rescript": "5.5.0",
     "nodemon": "3.1.0",
-    "rescript": "10.1.4",
-    "rescript-vitest": "1.3.0",
-    "vite": "5.1.5",
-    "vitest": "0.34.6"
+    "rescript": "11.0.1",
+    "vite": "5.1.5"
   }
 }

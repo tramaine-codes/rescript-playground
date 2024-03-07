@@ -946,37 +946,37 @@ var s = {
 var charizard = {
   name: "charizard",
   hp: 79,
-  ptype: /* Fire */1
+  ptype: "Fire"
 };
 
 var ember = {
   name: "bubble",
   hp: 40,
-  ptype: /* Fire */1
+  ptype: "Fire"
 };
 
 var squirtle = {
   name: "squirtle",
   hp: 44,
-  ptype: /* Water */2
+  ptype: "Water"
 };
 
 var bubble = {
   name: "bubble",
   hp: 40,
-  ptype: /* Water */2
+  ptype: "Water"
 };
 
 var facade = {
   name: "facade",
   hp: 70,
-  ptype: /* Normal */0
+  ptype: "Normal"
 };
 
 var covet = {
   name: "covet",
   hp: 60,
-  ptype: /* Normal */0
+  ptype: "Normal"
 };
 
 export {
