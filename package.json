@@ -1,7 +1,14 @@
 {
+  "devDependencies": {
+    "nodemon": "3.1.2",
+    "rescript": "11.1.1",
+    "vite": "5.2.12"
+  },
+  "keywords": [
+    "rescript"
+  ],
+  "license": "MIT",
   "name": "rescript",
-  "type": "module",
-  "version": "0.0.1",
   "scripts": {
     "build": "rescript",
     "clean": "rescript clean",
@@ -9,14 +16,6 @@
     "start": "nodemon src/Main.mjs",
     "watch": "rescript build -w"
   },
-  "keywords": [
-    "rescript"
-  ],
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "nodemon": "3.1.2",
-    "rescript": "11.1.1",
-    "vite": "5.2.12"
-  }
+  "type": "module",
+  "version": "0.0.1"
 }
